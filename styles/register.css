@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/brega.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    width: 700px;
+    min-height: 100px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.71);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: -5px 5px 10px 5px #e7e8e9ae;
+}
+
+.signup-form form {
+    padding: 20px;
+    text-align: center;
+    width: 700px;
+}
+
+.signup-form form .flex {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.signup-form form .flex .inputBox {
+    width: 49%;
+}
+
+.signup-form form .flex .inputBox span {
+    text-align: left;
+    cursor: default;
+    display: block;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.signup-form form .flex .inputBox .box {
+    width: 75%;
+    border: 3px solid #8d8d8d;
+    border-radius: 25px;
+    padding: 2px 20px;
+    font-size: 15px;
+    color: #000000;
+    outline: none;
+    margin-top: 10px;
+    transition: .3s;
+}
+
+.signup-form form .flex .inputBox .box:hover {
+    border: 3px solid #1cdcdc;
+}
+
+.signup-form form .flex .inputBox .box2 {
+    font-size: 15px;
+    color: #e2dede;
+}
+
+.signup-form form h3 {
+    width: 100%;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.signup-form form p {
+    font-weight: 600;
+    color: red;
+    font-size: medium;
+}
+
+.btn {
+    display: block;
+    margin-bottom: 1px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    border: none;
+    background: #0e6bb2;
+    box-shadow: -5px 3px 0px 0px #0162ac;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #f6f6f6;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: #022f4e;
+    box-shadow: -5px 3px 0px 0px #e4ab00;
+}
+
+.btn a {
+    text-decoration: none;
+    color: rgb(234, 228, 228);
+}
+
+
+/*
+.btnback {
+    display: block;
+    margin-bottom: 1px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border: none;
+    background: #2b7585;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: #f6f6f6;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btnback:hover {
+    transform: translateY(-5px);
+    background: #408697;
+}
+
+.btnback a {
+    text-decoration: none;
+    color: rgb(234, 228, 228);
+}
+*/
+
+
+/* The message box is shown when the user clicks on the password field */
+
+.pwbox {
+    box-shadow: 0px 5px 5px #363538;
+    border-radius: 5px;
+    background-color: #1d1d1db0;
+}
+
+#message {
+    display: none;
+    background-color: rgba(128, 126, 126, 0.109);
+    color: rgb(233, 233, 233);
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 14px;
+}
+
+
+/* Add a green text color and a checkmark when the password requirements are right */
+
+.valid {
+    color: rgb(6, 181, 6);
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+@media (max-width:850px) {
+    .signup-form form form .flex {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .signup-form form .flex .inputBox {
+        width: 100%;
+    }
+}

@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0px;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*background image*/
+
+body {
+    background-image: url(../images/webback8.webp);
+    padding: 8px;
+    padding-top: 8px;
+}
+
+
+/*Login button*/
+
+.loginbt {
+    text-align: center;
+    margin-right: 16px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    background: rgb(5, 149, 239);
+    box-shadow: -5px 3px 0px 0px rgb(5, 149, 239);
+    outline: none;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #f6f6f6;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.loginbt:hover {
+    transform: translateY(-5px);
+    background: #097ac6;
+    box-shadow: -5px 3px 0px 0px #e4ab00;
+}
+
+.loginbt a {
+    text-decoration: none;
+    color: rgb(234, 228, 228);
+}
+
+
+/* login avatar*/
+
+.avatar {
+    align-self: center;
+    width: 100px;
+    height: 80px;
+    margin-top: 20px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+section#top {
+    background: transparent;
+}
+
+.mainnav {
+    overflow: hidden;
+    background-color: #ffde59;
+    box-shadow: 0px 5px 0px 0px #f2c233;
+    border-radius: 5px;
+    position: sticky;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding-bottom: 20px;
+}
+
+.mainnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 25px;
+}
+
+.mainnav a:hover {
+    background-color: rgb(189, 215, 238);
+    color: rgb(4, 4, 4);
+    border-radius: 5px;
+}
+
+.mainnav a.active {
+    background-color: rgb(5, 149, 239);
+    color: white;
+    border-radius: 5px;
+}
+
+.mainnav .search-container {
+    float: right;
+}
+
+.mainnav input[type=text] {
+    padding: 6px;
+    margin-top: 5px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.mainnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 5px;
+    margin-right: 16px;
+    background: rgb(236, 228, 10);
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.mainnav .search-container button:hover {
+    background: rgb(5, 149, 239);
+}
+
+
+/* Slideshow container */
+
+.Slides {
+    display: none;
+}
+
+.slideshow-container {
+    position: static;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+/* Fading animation
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    position: static;
+  }
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }*/
+
+
+/* Styles for footer images*/
+
+.column {
+    width: 5%;
+    padding: 5px;
+}
+
+
+/* The sidebar menu */
+
+.sidebar {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidebar */
+}
+
+
+/* The sidebar links */
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #d9eeed;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/*Mouse over the navigation links, change their color */
+
+.sidebar a:hover {
+    color: #fffaae;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* The button used to open the sidebar */
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(236, 235, 197);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.openbtn:hover {
+    background-color: rgb(224, 221, 14);
+}
+
+.mainnavi {
+    transition: margin-left .5s;
+    /* transition effect */
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/*Calender*/
+
+.mycalendar-container {
+    display: inline-block;
+    border: 1px solid #eee;
+}
+
+.mycalendar-container.round-edge {
+    border-radius: 5%;
+    -o-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -webkit-border-radius: 5%;
+}
+
+.mycalendar-day-container {
+    /* day calendar style*/
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+}
+
+.mycalendar-day-container div {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.mycalendar-day-container .mycalendar-span-day {
+    font-size: 110%;
+}
+
+.mycalendar-day-container .mycalendar-span-date {
+    font-size: 250%;
+}
+
+.mycalendar-day-container .mycalendar-span-month-year {
+    font-size: 90%
+}
+
+.mycalendar-month-container {
+    /* month calendar style*/
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+}
+
+.mycalendar-month-container div {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.mycalendar-month-container .mycalendar-header {
+    position: relative;
+}
+
+.mycalendar-month-container .mycalendar-header .mycalendar-prev-next-btn {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+
+.mycalendar-month-container .mycalendar-header .mycalendar-prev-next-btn.prev-btn {
+    left: 0;
+}
+
+.mycalendar-month-container .mycalendar-header .mycalendar-prev-next-btn.next-btn {
+    right: 0;
+}
+
+.mycalendar-month-container .mycalendar-span-month-year {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.mycalendar-month-container .mycalendar-body table tr td {
+    padding: 5px;
+}
+
+.box {
+    position: relative;
+    z-index: 1000;
+}
+
+.container {
+    position: relative;
+    width: 225px;
+    height: 250px;
+    background: rgba(7, 7, 7, 0.1);
+    box-shadow: 0 25px 45px rgba(3, 3, 3, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mycalendar {
+    /*calender containt*/
+    width: 500%;
+    padding: 40px;
+}
+
+#mycalendar table {
+    /* daycalendar table */
+    width: 100%;
+    margin-top: 2px;
+    border-spacing: 1px;
+}
+
+#mycalendar table tr:nth-child(1) td {
+    /* daycalender Days of the week row*/
+    background: rgb(113, 110, 110);
+    color: #111;
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+#mycalendar table td {
+    /* daycalender data cells*/
+    color: rgb(99, 99, 99);
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.7em;
+    border-radius: 4px;
+}
+
+#mycalendar table td:hover {
+    background: #fff;
+    color: #111;
+}
+
+.mycalendar-month-container .mycalendar-today-date,
+.mycalendar-month-container .mycalendar-target-date {
+    /* daycalender today cell*/
+    background-color: rgb(150, 150, 150);
+    color: rgb(0, 0, 0) !important;
+}
+
+.mycalendar-month-container .mycalendar-header .mycalendar-prev-next-btn.prev-btn {
+    /* daycalender previous month button*/
+    background: rgb(152, 151, 151);
+    color: #111;
+    width: 22px;
+    height: 19px;
+    left: 4px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.mycalendar-month-container .mycalendar-header .mycalendar-prev-next-btn.next-btn {
+    /* daycalender next month button*/
+    background: rgb(152, 151, 151);
+    color: #111;
+    width: 22px;
+    height: 19px;
+    right: 4px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.mycalendar-month-container .mycalendar-span-month-year {
+    /* daycalender month */
+    color: rgb(242, 235, 235) !important;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+/*Registration intro page*/
+
+.registbt {
+    display: block;
+    width: 10%;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    background: #2196F3;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #f6f6f6;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.registbt:hover {
+    transform: translateY(-5px);
+    background: #408697;
+}
+
+.registbt a {
+    text-decoration: none;
+    color: rgb(234, 228, 228);
+}
+
+.p a {
+    text-decoration: none;
+}
+
+
+/* use profile */
+
+.profile .profile-img {
+    height: 200px;
+    width: 200p;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.profile .userprofile {
+    min-height: 60vh;
+    position: static;
+    width: 100%;
+    background: linear-gradient(to right, #b0e4f0, #f6f6f6, #c8ecf5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+
+.profile .userprofile .proali {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 500px;
+}
+
+.profile .userprofile .proali .outputBox {
+    width: 49%;
+}
+
+.profile .userprofile .proali .outputBox span {
+    text-align: left;
+    position: static;
+    margin-top: 15px;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    color: rgb(47, 57, 55);
+}
+
+.profile .userprofile .proali .outputBox .box {
+    width: 100%;
+    position: static;
+    border-radius: 5px;
+    background: #e2f1f4;
+    padding: 12px 14px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #787373;
+    margin-top: 10px;
+    cursor: none;
+}
+
+.profile .userprofile .proali .outputBox .boxnote {
+    height: 100px;
+    position: static;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #e2f1f4;
+    padding: 12px 14px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #787373;
+    margin-top: 10px;
+}
+
+
+/*footer*/
+
+.bottom {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #585a5bae;
+    background: #272727;
+    color: #f6f6f6;
+}
+
+.bottom .flex {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    gap: 60px;
+}
+
+.bottom .flex .inputBox {
+    width: 100%;
+}
+
+.bottom .flex .inputBox a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottom .flex .inputBox span {
+    text-align: left;
+    cursor: default;
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.bottom .flex .inputBox .img {
+    width: 300px;
+    height: 200px;
+}
+
+.bottom .flex .inputBox .imgphone {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.bottemtext {
+    height: 50px;
+    width: 100%;
+    padding-top: 4px;
+    color: #eee;
+    background: #272727;
+}
+
+
+/* welcome message */
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.welcome p {
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: bolder;
+    width: 19%;
+    background: linear-gradient(to right, #e6edee, #e7e9ea, #e6edee);
+    box-shadow: -8px 7px 20px 5px rgb(5, 149, 239);
+    color: #0162ac;
+    border-radius: 5px;
+    cursor: none;
+    transition: .3s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.welcome p:hover {
+    transform: translateY(-5px);
+    box-shadow: -5px 7px 10px 0px #e4ab00;
+}
+
+
+/*search*/
+
+.article-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.article-box {
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+
+/* Float four columns side by side */
+
+.h-column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+/* Remove extra left and right margins, due to padding */
+
+.h-row {
+    margin: 0 -5px;
+}
+
+
+/* Clear floats after the columns */
+
+.h-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+    .h-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Style the counter cards */
+
+.h-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
